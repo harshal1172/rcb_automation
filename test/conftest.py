@@ -7,7 +7,6 @@ driver = None
 
 @pytest.fixture(scope="class")
 def setup(request):
-    global log, jsondata
     with open('jsonfile/TeamRCB.json') as team:
         dict_data = requests.session()
         dict_data.jsondata = json.load(team)
